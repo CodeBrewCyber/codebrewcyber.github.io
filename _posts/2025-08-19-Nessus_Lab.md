@@ -3,7 +3,7 @@ layout: post
 title: Nessus Vulnerability Lab
 date: 19-08-2025
 categories: [Labs]
-tag: [lab, nessus, vulnerability,]
+tag: [lab, nessus, vulnerability]
 ---
 
 # Nessus Vulnerability Management Lab
