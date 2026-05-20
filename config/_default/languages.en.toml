@@ -1,0 +1,24 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "CodeBrew Cyber"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "January 2, 2006"
+  description = "Cyber security notes, research, tooling, and portfolio work from CodeBrew Cyber."
+  copyright = "&copy; { year } CodeBrew Cyber"
+
+[params.author]
+  name = "CodeBrew Cyber"
+  headline = "Cyber security blog, lab notes, and portfolio."
+  bio = "CodeBrew Cyber shares practical security research, defensive engineering notes, and portfolio projects."
+
+  [[params.author.links]]
+    github = "https://github.com/codebrewcyber"
+
+  [[params.author.links]]
+    linkedin = "https://www.linkedin.com/"
+

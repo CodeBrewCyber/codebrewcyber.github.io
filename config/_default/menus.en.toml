@@ -1,0 +1,26 @@
+[[main]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 10
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 20
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/codebrewcyber"
+  weight = 30
+
+[[footer]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 10
+
+[[footer]]
+  name = "About"
+  pageRef = "about"
+  weight = 20
+

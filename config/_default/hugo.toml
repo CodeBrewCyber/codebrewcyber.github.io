@@ -1,0 +1,21 @@
+baseURL = "https://codebrewcyber.github.io/codebrewcyber-hugo/"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+summaryLength = 0
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+

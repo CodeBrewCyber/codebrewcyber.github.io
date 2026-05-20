@@ -1,0 +1,15 @@
+# Hugo output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Hugo module/cache directories
+/vendor/
+/hugo_stats.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
