@@ -12,3 +12,18 @@ body {
 code, pre, kbd, samp {
   font-family: var(--font-mono);
 }
+
+/* Always-visible header — dark zinc with barely-there violet tint */
+div.fixed.inset-x-0.z-100 {
+  background: rgba(28, 22, 35, 0.97) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+#menu-blur {
+  background-color: transparent !important;
+}
+
+/* Remove hero background box */
+.single_hero_background {
+  display: none !important;
+}
