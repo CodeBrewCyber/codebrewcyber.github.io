@@ -11,17 +11,17 @@
   --color-neutral-800: 39, 39, 42;
   --color-neutral-900: 24, 24, 27;
 
-  /* Electric violet */
-  --color-primary-50: 245, 243, 255;
-  --color-primary-100: 237, 233, 254;
-  --color-primary-200: 221, 214, 254;
-  --color-primary-300: 196, 181, 253;
-  --color-primary-400: 167, 139, 250;
-  --color-primary-500: 139, 92, 246;
-  --color-primary-600: 124, 58, 237;
-  --color-primary-700: 109, 40, 217;
-  --color-primary-800: 91, 33, 182;
-  --color-primary-900: 76, 29, 149;
+  /* CodeBrew green */
+  --color-primary-50: 240, 253, 244;
+  --color-primary-100: 220, 252, 231;
+  --color-primary-200: 187, 247, 208;
+  --color-primary-300: 134, 239, 172;
+  --color-primary-400: 74, 222, 128;
+  --color-primary-500: 0, 204, 68;
+  --color-primary-600: 0, 168, 56;
+  --color-primary-700: 0, 134, 44;
+  --color-primary-800: 0, 104, 35;
+  --color-primary-900: 0, 78, 26;
 
   /* Cool blue */
   --color-secondary-50: 239, 246, 255;
