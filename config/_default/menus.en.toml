@@ -1,26 +1,75 @@
 [[main]]
-  name = "Blog"
-  pageRef = "blog"
+  name = "Cheatsheets"
+  pageRef = "cheatsheets"
   weight = 10
+
+[[main]]
+  name = "Writeups"
+  pageRef = "writeups"
+  weight = 20
+
+[[main]]
+  name = "Cloud"
+  pageRef = "cloud"
+  weight = 30
+
+[[main]]
+  name = "Learning"
+  pageRef = "learning"
+  weight = 40
+
+[[main]]
+  name = "Tools"
+  pageRef = "tools"
+  weight = 50
+
+[[main]]
+  name = "Notes"
+  pageRef = "notes"
+  weight = 60
 
 [[main]]
   name = "About"
   pageRef = "about"
-  weight = 20
+  weight = 70
 
 [[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/codebrewcyber"
+  weight = 80
+
+[[footer]]
+  name = "Cheatsheets"
+  pageRef = "cheatsheets"
+  weight = 10
+
+[[footer]]
+  name = "Writeups"
+  pageRef = "writeups"
+  weight = 20
+
+[[footer]]
+  name = "Cloud"
+  pageRef = "cloud"
   weight = 30
 
 [[footer]]
-  name = "Blog"
-  pageRef = "blog"
-  weight = 10
+  name = "Learning"
+  pageRef = "learning"
+  weight = 40
+
+[[footer]]
+  name = "Tools"
+  pageRef = "tools"
+  weight = 50
+
+[[footer]]
+  name = "Notes"
+  pageRef = "notes"
+  weight = 60
 
 [[footer]]
   name = "About"
   pageRef = "about"
-  weight = 20
-
+  weight = 70
