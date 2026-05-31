@@ -1,26 +1,177 @@
 [[main]]
-  name = "Blog"
-  pageRef = "blog"
+  name = "Cheatsheets"
+  identifier = "cheatsheets"
+  pageRef = "cheatsheets"
   weight = 10
+
+[[main]]
+  name = "Linux"
+  identifier = "cheatsheets-linux"
+  pageRef = "cheatsheets/linux"
+  parent = "cheatsheets"
+  weight = 11
+
+[[main]]
+  name = "Networking"
+  identifier = "cheatsheets-networking"
+  pageRef = "cheatsheets/networking"
+  parent = "cheatsheets"
+  weight = 12
+
+[[main]]
+  name = "Web"
+  identifier = "cheatsheets-web"
+  pageRef = "cheatsheets/web"
+  parent = "cheatsheets"
+  weight = 13
+
+[[main]]
+  name = "Containers"
+  identifier = "cheatsheets-containers"
+  pageRef = "cheatsheets/containers"
+  parent = "cheatsheets"
+  weight = 14
+
+[[main]]
+  name = "Cloud CLI"
+  identifier = "cheatsheets-cloud-cli"
+  pageRef = "cheatsheets/cloud-cli"
+  parent = "cheatsheets"
+  weight = 15
+
+[[main]]
+  name = "Writeups"
+  identifier = "writeups"
+  pageRef = "writeups"
+  weight = 20
+
+[[main]]
+  name = "CTF"
+  identifier = "writeups-ctf"
+  pageRef = "writeups/ctf"
+  parent = "writeups"
+  weight = 21
+
+[[main]]
+  name = "Rooms"
+  identifier = "writeups-rooms"
+  pageRef = "writeups/rooms"
+  parent = "writeups"
+  weight = 22
+
+[[main]]
+  name = "Labs"
+  identifier = "writeups-labs"
+  pageRef = "writeups/labs"
+  parent = "writeups"
+  weight = 23
+
+[[main]]
+  name = "Cloud"
+  identifier = "cloud"
+  pageRef = "cloud"
+  weight = 30
+
+[[main]]
+  name = "Projects"
+  identifier = "cloud-projects"
+  pageRef = "cloud/projects"
+  parent = "cloud"
+  weight = 31
+
+[[main]]
+  name = "Architecture"
+  identifier = "cloud-architecture"
+  pageRef = "cloud/architecture"
+  parent = "cloud"
+  weight = 32
+
+[[main]]
+  name = "Tooling"
+  identifier = "cloud-tooling"
+  pageRef = "cloud/tooling"
+  parent = "cloud"
+  weight = 33
+
+[[main]]
+  name = "Learning"
+  identifier = "learning"
+  pageRef = "learning"
+  weight = 40
+
+[[main]]
+  name = "Certifications"
+  identifier = "learning-certifications"
+  pageRef = "learning/certifications"
+  parent = "learning"
+  weight = 41
+
+[[main]]
+  name = "Platforms"
+  identifier = "learning-platforms"
+  pageRef = "learning/platforms"
+  parent = "learning"
+  weight = 42
+
+[[main]]
+  name = "Resources"
+  identifier = "learning-resources"
+  pageRef = "learning/resources"
+  parent = "learning"
+  weight = 43
+
+[[main]]
+  name = "Tools"
+  pageRef = "tools"
+  weight = 50
+
+[[main]]
+  name = "Notes"
+  pageRef = "notes"
+  weight = 60
 
 [[main]]
   name = "About"
   pageRef = "about"
-  weight = 20
+  weight = 70
 
 [[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/codebrewcyber"
+  weight = 80
+
+[[footer]]
+  name = "Cheatsheets"
+  pageRef = "cheatsheets"
+  weight = 10
+
+[[footer]]
+  name = "Writeups"
+  pageRef = "writeups"
+  weight = 20
+
+[[footer]]
+  name = "Cloud"
+  pageRef = "cloud"
   weight = 30
 
 [[footer]]
-  name = "Blog"
-  pageRef = "blog"
-  weight = 10
+  name = "Learning"
+  pageRef = "learning"
+  weight = 40
+
+[[footer]]
+  name = "Tools"
+  pageRef = "tools"
+  weight = 50
+
+[[footer]]
+  name = "Notes"
+  pageRef = "notes"
+  weight = 60
 
 [[footer]]
   name = "About"
   pageRef = "about"
-  weight = 20
-
+  weight = 70

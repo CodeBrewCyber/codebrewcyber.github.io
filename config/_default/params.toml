@@ -1,9 +1,10 @@
-colorScheme = "noir"
+colorScheme = "codebrew"
 defaultAppearance = "dark"
-autoSwitchAppearance = true
+autoSwitchAppearance = false
+customFonts = true
 enableSearch = true
 enableCodeCopy = true
-mainSections = ["blog"]
+mainSections = ["blog", "notes"]
 
 [header]
   layout = "fixed-fill-blur"

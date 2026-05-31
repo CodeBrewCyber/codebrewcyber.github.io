@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
+
+:root {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+/* Always-visible header — dark zinc with barely-there green tint */
+div.fixed.inset-x-0.z-100 {
+  background: rgba(18, 28, 20, 0.97) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+#menu-blur {
+  background-color: transparent !important;
+}
+
+/* Remove hero background box */
+.single_hero_background {
+  display: none !important;
+}
+
+/* Dropdown panels — match header style */
+.pt-2.p-5.mt-2.rounded-xl {
+  background: rgba(18, 28, 20, 0.97) !important;
+  backdrop-filter: blur(10px) !important;
+}
