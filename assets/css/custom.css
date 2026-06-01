@@ -17,6 +17,14 @@ code, pre, kbd, samp {
 div.fixed.inset-x-0.z-100 {
   background: rgba(18, 28, 20, 0.97) !important;
   backdrop-filter: blur(10px) !important;
+  color: rgba(244, 244, 245, 0.9) !important;
+}
+
+div.fixed.inset-x-0.z-100 a,
+div.fixed.inset-x-0.z-100 button,
+div.fixed.inset-x-0.z-100 span,
+div.fixed.inset-x-0.z-100 svg {
+  color: inherit !important;
 }
 
 #menu-blur {
@@ -32,4 +40,11 @@ div.fixed.inset-x-0.z-100 {
 .pt-2.p-5.mt-2.rounded-xl {
   background: rgba(18, 28, 20, 0.97) !important;
   backdrop-filter: blur(10px) !important;
+  color: rgba(244, 244, 245, 0.9) !important;
+}
+
+.pt-2.p-5.mt-2.rounded-xl a,
+.pt-2.p-5.mt-2.rounded-xl span,
+.pt-2.p-5.mt-2.rounded-xl svg {
+  color: inherit !important;
 }
