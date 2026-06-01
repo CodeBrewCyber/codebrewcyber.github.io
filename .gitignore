@@ -7,6 +7,9 @@
 /vendor/
 /hugo_stats.json
 
+# Claude Code
+CLAUDE.md
+
 # OS/editor noise
 .DS_Store
 Thumbs.db
