@@ -36,7 +36,150 @@ div.fixed.inset-x-0.z-100 svg {
   display: none !important;
 }
 
-/* Term of the Day widget */
+/* ─── Hero section ────────────────────────────────────────────── */
+.cb-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 1.5rem 2.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: rgba(18, 28, 20, 0.55);
+  border: 1px solid rgba(0, 204, 68, 0.15);
+  margin-bottom: 2rem;
+  /* Fixed min-height so the canvas never collapses and the section
+     never moves while the typewriter runs */
+  min-height: 260px;
+}
+
+.cb-hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cb-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 680px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Avatar with spinning conic-gradient ring */
+.cb-avatar-ring {
+  position: relative;
+  flex-shrink: 0;
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+}
+
+.cb-avatar-ring::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(0, 204, 68, 0.9) 0deg,
+    rgba(0, 204, 68, 0.1) 120deg,
+    rgba(0, 204, 68, 0.6) 240deg,
+    rgba(0, 204, 68, 0.9) 360deg
+  );
+  animation: cb-spin 4s linear infinite;
+  z-index: 0;
+}
+
+.cb-avatar-ring::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: rgb(18, 28, 20);
+  z-index: 1;
+}
+
+.cb-avatar {
+  position: relative;
+  z-index: 2;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 6px;
+}
+
+@keyframes cb-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Text block */
+.cb-hero-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.cb-hero-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(0, 204, 68, 0.7);
+  letter-spacing: 0.03em;
+}
+
+.cb-hero-name {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: rgba(244, 244, 245, 0.97);
+  margin: 0;
+  /* Prevent wrapping during typewriter animation */
+  white-space: nowrap;
+}
+
+.cb-type-cursor {
+  display: inline-block;
+  color: rgb(0, 204, 68);
+  font-weight: 300;
+  margin-left: 1px;
+}
+
+.cb-hero-headline {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: rgb(0, 204, 68);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.cb-hero-links {
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+}
+
+.cb-hero-bio {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 640px;
+  font-size: 0.95rem;
+  color: rgba(212, 212, 216, 0.8);
+}
+
+/* ─── Term of the Day widget */
 .term-card {
   background: rgba(18, 28, 20, 0.6);
   border: 1px solid rgba(74, 222, 128, 0.25);
