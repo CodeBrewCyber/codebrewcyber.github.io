@@ -6,6 +6,10 @@ enableSearch = true
 enableCodeCopy = true
 mainSections = ["blog", "notes"]
 
+logo = "logo.png"
+logoDark = "logo.png"
+showTitle = true
+
 [header]
   layout = "fixed-fill-blur"
 
