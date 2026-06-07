@@ -36,6 +36,70 @@ div.fixed.inset-x-0.z-100 svg {
   display: none !important;
 }
 
+/* Term of the Day widget */
+.term-card {
+  background: rgba(18, 28, 20, 0.6);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-left: 3px solid #4ade80;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+}
+
+.term-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.term-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4ade80;
+}
+
+.term-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.7);
+  background: rgba(148, 163, 184, 0.1);
+  padding: 0.1rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.term-name {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: #f4f4f5 !important;
+  margin: 0 0 0.5rem 0 !important;
+}
+
+.term-definition {
+  color: rgba(212, 212, 216, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem 0;
+}
+
+.term-example {
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.75);
+  border-top: 1px solid rgba(74, 222, 128, 0.1);
+  padding-top: 0.65rem;
+  line-height: 1.5;
+}
+
+.term-example-label {
+  font-weight: 700;
+  color: rgba(74, 222, 128, 0.7);
+  margin-right: 0.35rem;
+}
+
 /* Dropdown panels — match header style */
 .pt-2.p-5.mt-2.rounded-xl {
   background: rgba(18, 28, 20, 0.97) !important;

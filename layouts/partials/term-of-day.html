@@ -1,0 +1,41 @@
+<section class="term-of-day my-8 w-full max-w-2xl mx-auto">
+  <div class="term-card" id="term-of-day-card">
+    <div class="term-header">
+      <span class="term-label">Term of the Day</span>
+      <span class="term-type" id="tod-type">—</span>
+    </div>
+    <h3 class="term-name" id="tod-term">Loading...</h3>
+    <p class="term-definition" id="tod-definition"></p>
+    <div class="term-example" id="tod-example-wrap" style="display:none">
+      <span class="term-example-label">Example:</span>
+      <span id="tod-example"></span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  function dayOfYear(d) {
+    var start = new Date(d.getFullYear(), 0, 0);
+    var diff = d - start + (start.getTimezoneOffset() - d.getTimezoneOffset()) * 60 * 1000;
+    return Math.floor(diff / 86400000);
+  }
+
+  fetch('/data/cybersec-terms.json')
+    .then(function (r) { return r.json(); })
+    .then(function (terms) {
+      var idx = dayOfYear(new Date()) % terms.length;
+      var t = terms[idx];
+      document.getElementById('tod-term').textContent = t.term;
+      document.getElementById('tod-type').textContent = t.type;
+      document.getElementById('tod-definition').textContent = t.definition;
+      if (t.example) {
+        document.getElementById('tod-example').textContent = t.example;
+        document.getElementById('tod-example-wrap').style.display = '';
+      }
+    })
+    .catch(function () {
+      document.getElementById('tod-term').textContent = 'Unavailable';
+    });
+})();
+</script>
