@@ -26,10 +26,10 @@
         var x = c * CELL;
         var y = r * CELL;
         var wave = Math.sin(tick * 0.03 + c * 0.4 + r * 0.3);
-        var alpha = 0.08 + wave * 0.06;
+        var alpha = 0.25 + wave * 0.2;
         ctx.beginPath();
-        ctx.arc(x, y, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 204, 68, ' + Math.max(0.02, alpha) + ')';
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 204, 68, ' + Math.max(0.05, alpha) + ')';
         ctx.fill();
       }
     }
