@@ -42,6 +42,14 @@ div.fixed.inset-x-0.z-100 svg {
   color: inherit !important;
 }
 
+/* Header site links — turn green on hover (matches explore cards).
+   Needs !important to beat the color:inherit override above. */
+div.fixed.inset-x-0.z-100 a:hover,
+div.fixed.inset-x-0.z-100 a:hover span,
+div.fixed.inset-x-0.z-100 a:hover svg {
+  color: rgb(0, 204, 68) !important;
+}
+
 #menu-blur {
   background-color: transparent !important;
 }
@@ -704,4 +712,11 @@ a[class*="decoration-primary"]:hover {
 .pt-2.p-5.mt-2.rounded-xl span,
 .pt-2.p-5.mt-2.rounded-xl svg {
   color: inherit !important;
+}
+
+/* Dropdown submenu links — green text on hover */
+.pt-2.p-5.mt-2.rounded-xl a:hover,
+.pt-2.p-5.mt-2.rounded-xl a:hover span,
+.pt-2.p-5.mt-2.rounded-xl a:hover svg {
+  color: rgb(0, 204, 68) !important;
 }
