@@ -238,7 +238,13 @@ div.fixed.inset-x-0.z-100 svg {
 /* Title color transition to green on hover */
 .article-link--simple:hover h2,
 .article-link--card:hover h2 {
-  color: rgb(0, 204, 68);
+  color: rgb(0, 204, 68) !important;
+}
+
+/* Drop the theme's green underline on hover — the green text is the cue */
+.article-link--simple a:hover,
+.article-link--card a:hover {
+  text-decoration: none !important;
 }
 
 .article-link--simple h2,
@@ -628,6 +634,31 @@ html.dark .prose blockquote p:last-of-type::after {
   color: rgb(0, 204, 68);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* ─── Link hover: green text site-wide (match explore cards) ──── */
+/* The theme's default link hover only adds a green underline. Carry the
+   "explore" card behaviour everywhere: the text itself turns green on hover.
+   Underlines are kept where the theme adds them as an extra affordance. */
+
+/* Prose / in-content links */
+html.dark .prose a:not(.not-prose):hover {
+  color: rgb(0, 204, 68);
+}
+
+/* Table of contents links */
+.toc a:hover {
+  color: rgb(0, 204, 68) !important;
+}
+
+/* Breadcrumbs (header ordered list) */
+header ol a:hover {
+  color: rgb(0, 204, 68);
+}
+
+/* Footer attribution + any theme link using the primary-decoration pattern */
+a[class*="decoration-primary"]:hover {
+  color: rgb(0, 204, 68);
 }
 
 /* ─── Reading progress bar ───────────────────────────────────── */

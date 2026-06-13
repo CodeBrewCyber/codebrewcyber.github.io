@@ -1,4 +1,12 @@
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<script src="/js/hero.js" defer></script>
-<script src="/js/progress.js" defer></script>
+{{/* Self-hosted JS through Hugo's pipeline: minified + fingerprinted so the
+     URL changes whenever the file content does — guarantees cache busting
+     (static/ files are served unversioned and get stuck in browser caches). */}}
+{{ $alg := site.Params.fingerprintAlgorithm | default "sha512" }}
+{{ range slice "js/hero.js" "js/progress.js" }}
+  {{ with resources.Get . }}
+    {{ $js := . | minify | fingerprint $alg }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{ end }}
+{{ end }}
