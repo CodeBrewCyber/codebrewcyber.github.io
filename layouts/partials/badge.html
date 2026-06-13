@@ -1,0 +1,12 @@
+{{- /* Overrides Blowfish v2 badge.html — mono pill styling; re-sync if the theme module updates */ -}}
+<span class="flex cursor-pointer">
+  {{ $linkTitle := . }}
+  {{ $useSecondaryColor := false }}
+  {{ if (reflect.IsMap . ) }}
+    {{ $linkTitle = .linkTitle }}
+    {{ $useSecondaryColor = cond (not .useSecondaryColor) false .useSecondaryColor }}
+  {{ end }}
+  <span class="cb-badge{{ if $useSecondaryColor }} cb-badge--secondary{{ end }}">
+    {{ $linkTitle }}
+  </span>
+</span>

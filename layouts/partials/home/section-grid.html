@@ -1,0 +1,22 @@
+{{/* Section showcase grid — data-driven from data/sections.yaml */}}
+<section class="cb-section-grid-wrap">
+  <p class="cb-section-label">// explore</p>
+  <div class="cb-section-grid">
+    {{ range hugo.Data.sections }}
+      {{ $count := 0 }}
+      {{ with site.GetPage .path }}
+        {{ $count = len .RegularPagesRecursive }}
+      {{ end }}
+      <a class="cb-section-card" href="{{ .path | relURL }}">
+        <span class="cb-section-icon">{{ partial "icon.html" .icon }}</span>
+        <span class="cb-section-body">
+          <span class="cb-section-title">{{ .title }}</span>
+          <span class="cb-section-desc">{{ .desc }}</span>
+        </span>
+        {{ if gt $count 0 }}
+          <span class="cb-section-count">{{ $count }}</span>
+        {{ end }}
+      </a>
+    {{ end }}
+  </div>
+</section>

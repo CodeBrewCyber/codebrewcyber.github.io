@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
+/* Self-hosted variable fonts (static/fonts/) */
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
@@ -121,6 +136,14 @@ div.fixed.inset-x-0.z-100 svg {
   to { transform: rotate(360deg); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .cb-avatar-ring::before,
+  .cb-footer-prompt .cb-type-cursor,
+  .cb-404 .cb-type-cursor {
+    animation: none;
+  }
+}
+
 /* Text block */
 .cb-hero-text {
   position: relative;
@@ -145,8 +168,14 @@ div.fixed.inset-x-0.z-100 svg {
   line-height: 1.15;
   color: rgba(244, 244, 245, 0.97);
   margin: 0;
-  /* Prevent wrapping during typewriter animation */
-  white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
+/* Prevent wrapping during typewriter animation — only where it fits */
+@media (min-width: 480px) {
+  .cb-hero-name {
+    white-space: nowrap;
+  }
 }
 
 .cb-type-cursor {
@@ -288,6 +317,349 @@ div.fixed.inset-x-0.z-100 svg {
   font-weight: 700;
   color: rgba(74, 222, 128, 0.7);
   margin-right: 0.35rem;
+}
+
+/* ─── Code blocks: terminal chrome ───────────────────────────── */
+.cb-code-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 1rem;
+  background: rgba(18, 28, 20, 0.95);
+  border-bottom: 1px solid rgba(0, 204, 68, 0.15);
+  font-family: var(--font-mono);
+}
+
+.cb-code-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.cb-code-dots span {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: rgba(248, 113, 113, 0.7);
+}
+
+.cb-code-dots span:nth-child(2) { background: rgba(251, 191, 36, 0.7); }
+.cb-code-dots span:nth-child(3) { background: rgba(74, 222, 128, 0.7); }
+
+.cb-code-lang {
+  font-size: 0.7rem;
+  color: rgba(0, 204, 68, 0.7);
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+/* Bar sits above the highlight, so kill the highlight's own top radius */
+.highlight-wrapper .highlight pre,
+.highlight-wrapper .highlight {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.highlight-wrapper {
+  border: 1px solid rgba(63, 63, 70, 0.6);
+}
+
+html.dark .codeblock-title {
+  background: rgba(18, 28, 20, 0.95);
+  border-bottom-color: rgba(63, 63, 70, 0.6);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(212, 212, 216, 0.85);
+}
+
+/* Copy button (injected by theme JS) — sit flush over the bar */
+.copy-button {
+  width: auto !important;
+  height: auto !important;
+  padding: 0.3rem 0.9rem !important;
+  font-size: 0.7rem !important;
+  background: transparent !important;
+  color: rgba(0, 204, 68, 0.8) !important;
+  border-bottom-left-radius: 0.5rem !important;
+}
+
+.copy-button:hover,
+.copy-button:focus,
+.copy-button:active,
+.copy-button:active:hover {
+  background: rgba(0, 204, 68, 0.15) !important;
+  color: rgb(0, 204, 68) !important;
+}
+
+/* ─── Chroma syntax palette (overrides theme github-dark) ────── */
+html.dark .bg,
+html.dark .chroma {
+  color: #d4d4d8;
+  background-color: #0d120e;
+}
+
+/* Keywords / operators / tags — brand green */
+html.dark .chroma .k,  html.dark .chroma .kd, html.dark .chroma .kn,
+html.dark .chroma .kr, html.dark .chroma .kt, html.dark .chroma .kc,
+html.dark .chroma .kp, html.dark .chroma .nt, html.dark .chroma .o,
+html.dark .chroma .ow { color: #4ade80; font-weight: 600; }
+
+/* Strings / numbers — cool blue */
+html.dark .chroma .s,  html.dark .chroma .s1, html.dark .chroma .s2,
+html.dark .chroma .sb, html.dark .chroma .sc, html.dark .chroma .sd,
+html.dark .chroma .sx, html.dark .chroma .ss, html.dark .chroma .si,
+html.dark .chroma .sa, html.dark .chroma .se, html.dark .chroma .sh,
+html.dark .chroma .sr, html.dark .chroma .dl, html.dark .chroma .l,
+html.dark .chroma .ld, html.dark .chroma .m,  html.dark .chroma .mb,
+html.dark .chroma .mf, html.dark .chroma .mh, html.dark .chroma .mi,
+html.dark .chroma .il, html.dark .chroma .mo { color: #93c5fd; font-weight: 400; }
+
+/* Functions / classes / decorators — warm amber */
+html.dark .chroma .nf, html.dark .chroma .fm, html.dark .chroma .nc,
+html.dark .chroma .nd, html.dark .chroma .ne, html.dark .chroma .ni { color: #fcd34d; font-weight: 600; }
+
+/* Names / variables / builtins — neutral */
+html.dark .chroma .nv, html.dark .chroma .vc, html.dark .chroma .vg,
+html.dark .chroma .vi, html.dark .chroma .vm, html.dark .chroma .nb,
+html.dark .chroma .no, html.dark .chroma .nl, html.dark .chroma .nn,
+html.dark .chroma .py { color: #e4e4e7; font-weight: 400; }
+
+/* Comments — muted zinc */
+html.dark .chroma .c,  html.dark .chroma .ch, html.dark .chroma .cm,
+html.dark .chroma .c1, html.dark .chroma .cs, html.dark .chroma .cp,
+html.dark .chroma .cpf { color: #71717a; font-weight: 400; }
+
+/* Errors / prompts / line numbers */
+html.dark .chroma .err { color: #f87171; }
+html.dark .chroma .gp  { color: rgba(0, 204, 68, 0.7); }
+html.dark .chroma .go  { color: #a1a1aa; }
+html.dark .chroma .lnt, html.dark .chroma .ln { color: #52525b; }
+html.dark .chroma .hl  { background-color: rgba(0, 204, 68, 0.08); }
+
+/* ─── Prose: heading anchors + blockquotes ───────────────────── */
+html.dark .prose .group > span > a {
+  color: rgba(0, 204, 68, 0.7);
+  font-family: var(--font-mono);
+}
+
+html.dark .prose .group > span > a:hover {
+  color: rgb(0, 204, 68);
+}
+
+html.dark .prose blockquote {
+  border-left: 3px solid rgba(0, 204, 68, 0.6);
+  background: rgba(24, 24, 27, 0.5);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: normal;
+  color: rgba(212, 212, 216, 0.85);
+}
+
+html.dark .prose blockquote p:first-of-type::before,
+html.dark .prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+/* ─── Section showcase grid ──────────────────────────────────── */
+.cb-section-grid-wrap {
+  margin: 2rem 0;
+}
+
+.cb-section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .cb-section-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .cb-section-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cb-section-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  background: rgba(24, 24, 27, 0.8);
+  border: 1px solid rgba(63, 63, 70, 0.6);
+  border-left: 3px solid rgba(0, 204, 68, 0.5);
+  border-radius: 0.75rem;
+  text-decoration: none !important;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cb-section-card:hover {
+  transform: translateY(-2px);
+  border-left-color: rgba(0, 204, 68, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 204, 68, 0.1);
+}
+
+.cb-section-icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: rgba(0, 204, 68, 0.8);
+}
+
+.cb-section-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cb-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cb-section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgba(244, 244, 245, 0.95);
+  transition: color 0.18s ease;
+}
+
+.cb-section-card:hover .cb-section-title {
+  color: rgb(0, 204, 68);
+}
+
+.cb-section-desc {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(161, 161, 170, 0.8);
+}
+
+.cb-section-count {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: rgba(0, 204, 68, 0.6);
+}
+
+/* ─── Badges: mono pills ─────────────────────────────────────── */
+.cb-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  padding: 0.1rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 204, 68, 0.4);
+  color: rgba(74, 222, 128, 0.9);
+  background: rgba(0, 204, 68, 0.06);
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.cb-badge:hover {
+  border-color: rgba(0, 204, 68, 0.8);
+  background: rgba(0, 204, 68, 0.12);
+}
+
+.cb-badge--secondary {
+  border-color: rgba(96, 165, 250, 0.4);
+  color: rgba(147, 197, 253, 0.9);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.cb-badge--secondary:hover {
+  border-color: rgba(96, 165, 250, 0.8);
+  background: rgba(59, 130, 246, 0.12);
+}
+
+/* ─── Footer prompt motif ────────────────────────────────────── */
+.cb-footer-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(161, 161, 170, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.cb-footer-path {
+  color: rgba(0, 204, 68, 0.7);
+}
+
+.cb-footer-prompt .cb-type-cursor,
+.cb-404 .cb-type-cursor {
+  animation: cb-blink 1.1s steps(2) infinite;
+}
+
+@keyframes cb-blink {
+  50% { opacity: 0; }
+}
+
+/* ─── 404 page ───────────────────────────────────────────────── */
+.cb-404 {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.cb-404-terminal {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(63, 63, 70, 0.6);
+  background: #0d120e;
+  box-shadow: 0 8px 40px rgba(0, 204, 68, 0.08);
+}
+
+.cb-404-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: rgba(212, 212, 216, 0.9);
+}
+
+.cb-404-error {
+  color: rgba(248, 113, 113, 0.9);
+}
+
+.cb-404-body a {
+  color: rgb(0, 204, 68);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ─── Reading progress bar ───────────────────────────────────── */
+.cb-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 200;
+  background: linear-gradient(90deg, rgb(0, 204, 68), rgba(0, 204, 68, 0.6));
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .cb-progress {
+    animation: cb-progress-grow linear both;
+    animation-timeline: scroll(root);
+  }
+
+  @keyframes cb-progress-grow {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+}
+
+/* ─── List page headers ──────────────────────────────────────── */
+.cb-list-title {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
 }
 
 /* Dropdown panels — match header style */

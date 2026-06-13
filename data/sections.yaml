@@ -1,0 +1,30 @@
+# Homepage section showcase grid — order here is display order
+- title: Cheatsheets
+  path: /cheatsheets
+  icon: file-lines
+  desc: Quick-reference commands for Linux, networking, web, containers, and cloud CLIs.
+
+- title: Writeups
+  path: /writeups
+  icon: bug
+  desc: CTF challenges, room walkthroughs, and lab notes — methodology included.
+
+- title: Cloud
+  path: /cloud
+  icon: cloud
+  desc: Cloud security projects, architecture breakdowns, and tooling.
+
+- title: Learning
+  path: /learning
+  icon: graduation-cap
+  desc: Certification progress, training platforms, and curated resources.
+
+- title: Notes
+  path: /notes
+  icon: pencil
+  desc: Short-form lab notes and things worth writing down.
+
+- title: Tools
+  path: /tools
+  icon: terminal
+  desc: Scripts and tooling I build and use.
