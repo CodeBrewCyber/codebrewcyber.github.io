@@ -4,7 +4,8 @@ date = 2026-07-06T14:45:00-04:00
 draft = false
 description = "Clone a custom RBAC role, deny deployments with Azure Policy, and block deletion with a resource lock: three governance layers in one lab."
 tags = ["azure", "rbac", "azure-policy", "governance", "sc-500"]
-categories = ["writeups"]
+categories = ["labs"]
+aliases = ["/writeups/labs/custom-role-azure-policy-resource-lock/"]
 +++
 
 Part of my SC-500 study series: hands-on labs in a test tenant, one concept at a time.

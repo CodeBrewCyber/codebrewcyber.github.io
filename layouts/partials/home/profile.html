@@ -40,11 +40,13 @@
     <div class="cb-hero-text">
       <span class="cb-hero-prompt">~/codebrewcyber</span>
       {{/* Full name rendered invisibly first so JS can measure it, then types in */}}
+      {{/* Site branding, not the author handle — the byline says "CodeBrew",
+           the site is "CodeBrew Cyber" */}}
       <h1
         id="cb-hero-name"
         class="cb-hero-name"
-        data-name="{{ .Site.Params.Author.name | default .Site.Title }}"
-        style="visibility:hidden">{{ .Site.Params.Author.name | default .Site.Title }}</h1>
+        data-name="{{ .Site.Title | default .Site.Params.Author.name }}"
+        style="visibility:hidden">{{ .Site.Title | default .Site.Params.Author.name }}</h1>
       {{ with .Site.Params.Author.headline }}
         <p class="cb-hero-headline">{{ . | markdownify }}</p>
       {{ end }}

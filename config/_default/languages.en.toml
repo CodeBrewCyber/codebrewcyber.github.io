@@ -12,7 +12,7 @@ title = "CodeBrew Cyber"
   copyright = "&copy; { year } CodeBrew Cyber"
 
 [params.author]
-  name = "CodeBrew Cyber"
+  name = "CodeBrew"
   headline = "Cyber security blog, lab notes, and portfolio."
   bio = "CodeBrew Cyber shares practical security research, defensive engineering notes, and portfolio projects."
 
@@ -20,5 +20,5 @@ title = "CodeBrew Cyber"
     github = "https://github.com/codebrewcyber"
 
   [[params.author.links]]
-    linkedin = "https://www.linkedin.com/"
+    linkedin = "https://www.linkedin.com/in/brentbuch/"
 

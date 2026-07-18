@@ -4,7 +4,8 @@ date = 2026-07-05T21:00:00-04:00
 draft = false
 description = "Build a location-based Conditional Access block policy, deploy it in report-only mode, and prove the logic with the What If tool."
 tags = ["azure", "entra-id", "conditional-access", "sc-500"]
-categories = ["writeups"]
+categories = ["labs"]
+aliases = ["/writeups/labs/conditional-access-report-only-what-if/"]
 +++
 
 Part of my SC-500 study series: hands-on labs in a test tenant, one concept at a time.

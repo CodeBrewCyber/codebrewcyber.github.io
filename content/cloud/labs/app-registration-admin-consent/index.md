@@ -4,7 +4,8 @@ date = 2026-07-05T21:30:00-04:00
 draft = false
 description = "Register an Entra ID application, issue a client secret, grant tenant-wide admin consent, and trace the grant to the service principal."
 tags = ["azure", "entra-id", "identity", "sc-500"]
-categories = ["writeups"]
+categories = ["labs"]
+aliases = ["/writeups/labs/app-registration-admin-consent/"]
 +++
 
 Part of my SC-500 study series: hands-on labs in a test tenant, one concept at a time.

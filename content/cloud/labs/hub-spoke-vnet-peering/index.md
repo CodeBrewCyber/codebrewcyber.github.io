@@ -4,7 +4,8 @@ date = 2026-07-11T19:30:00-04:00
 draft = false
 description = "Build a hub-and-spoke topology with VNet peering and verify non-transitivity with live pings between spoke VMs."
 tags = ["azure", "networking", "vnet-peering", "sc-500"]
-categories = ["writeups"]
+categories = ["labs"]
+aliases = ["/writeups/labs/hub-spoke-vnet-peering/"]
 +++
 
 Part of my SC-500 study series: hands-on labs in a test tenant, one concept at a time.

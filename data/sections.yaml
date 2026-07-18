@@ -4,15 +4,10 @@
   icon: file-lines
   desc: Quick-reference commands for Linux, networking, web, containers, and cloud CLIs.
 
-- title: Writeups
-  path: /writeups
-  icon: bug
-  desc: CTF challenges, room walkthroughs, and lab notes — methodology included.
-
 - title: Cloud
   path: /cloud
   icon: cloud
-  desc: Cloud security projects, architecture breakdowns, and tooling.
+  desc: Hands-on cloud security labs, certification prep, and architecture notes — methodology included.
 
 - title: Learning
   path: /learning

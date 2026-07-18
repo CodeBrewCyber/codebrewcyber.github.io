@@ -4,7 +4,8 @@ date = 2026-07-05T20:30:00-04:00
 draft = false
 description = "Configure a PIM eligible assignment with approval, activate a role just-in-time, and follow the full trail through the audit logs."
 tags = ["azure", "entra-id", "pim", "identity-governance", "sc-500"]
-categories = ["writeups"]
+categories = ["labs"]
+aliases = ["/writeups/labs/pim-eligible-role-activation/"]
 +++
 
 Part of my SC-500 study series: hands-on labs in a test tenant, one concept at a time.

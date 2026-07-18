@@ -4,7 +4,8 @@ date = 2026-07-11T22:00:00-04:00
 draft = false
 description = "Flip NSG rule priorities and watch the outcome reverse, verified with IP flow verify and effective security rules."
 tags = ["azure", "networking", "nsg", "network-watcher", "sc-500"]
-categories = ["writeups"]
+categories = ["labs"]
+aliases = ["/writeups/labs/nsg-priority-network-watcher/"]
 +++
 
 Part of my SC-500 study series: hands-on labs in a test tenant, one concept at a time.
