@@ -14,7 +14,7 @@ title = "CodeBrew Cyber"
 [params.author]
   name = "CodeBrew"
   headline = "Cyber security blog, lab notes, and portfolio."
-  bio = "CodeBrew Cyber shares practical security research, defensive engineering notes, and portfolio projects."
+  bio = "CodeBrew shares practical security research, defensive engineering notes, and portfolio projects."
 
   [[params.author.links]]
     github = "https://github.com/codebrewcyber"
