@@ -113,4 +113,3 @@ Re-enabled public access from selected networks (just my IP) to leave a public p
 ## Related labs
 
 - [Generate and Use a Scoped SAS Token]({{< ref "generate-scoped-sas-token" >}}) reuses this environment
-- Azure SQL Database Hardening applies the same network-lockdown pattern to a different data service

@@ -94,4 +94,3 @@ az group delete --name rg-week3-lab --yes --no-wait
 ## Related labs
 
 - [Lock Down a Storage Account End-to-End]({{< ref "lock-down-storage-account" >}}) is this lab's environment
-- Azure SQL Database Hardening applies the same lockdown thinking to a managed database
