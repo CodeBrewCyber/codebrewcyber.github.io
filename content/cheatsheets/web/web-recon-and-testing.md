@@ -52,7 +52,7 @@ gobuster dir -u https://target.com -w wordlist.txt -k              # skip TLS ve
 gobuster dir -u https://target.com -w wordlist.txt -t 50           # 50 threads
 gobuster dir -u https://target.com -w wordlist.txt -b 404,403      # blacklist codes
 
-# DNS mode — subdomain enumeration
+# DNS mode: subdomain enumeration
 gobuster dns -d target.com -w subdomains.txt
 
 # Virtual host enumeration
@@ -178,7 +178,7 @@ Set-Cookie: session=abc; HttpOnly; Secure; SameSite=Strict
 
 | Flag | Purpose |
 |------|---------|
-| `HttpOnly` | Prevents JS access — mitigates XSS session theft |
+| `HttpOnly` | Prevents JS access, mitigating XSS session theft |
 | `Secure` | Transmit over HTTPS only |
 | `SameSite=Strict` | Blocks cross-site request sending |
 | `SameSite=Lax` | Allows top-level navigation GETs |

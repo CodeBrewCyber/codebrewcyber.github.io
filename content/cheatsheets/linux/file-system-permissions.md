@@ -60,16 +60,16 @@ chown -R user:group dir/
 ## Special Permission Bits
 
 ```bash
-# SUID — file runs as file owner, not caller
+# SUID: file runs as file owner, not caller
 chmod u+s /path/to/binary
-# Example: /usr/bin/passwd is SUID root — ls shows 's' in owner execute bit
+# Example: /usr/bin/passwd is SUID root (ls shows 's' in owner execute bit)
 
-# SGID — file runs as group; directory: new files inherit group
+# SGID: file runs as group; directory: new files inherit group
 chmod g+s /path/to/dir
 
-# Sticky bit — only owner can delete files in a directory
+# Sticky bit: only owner can delete files in a directory
 chmod +t /tmp
-# Example: /tmp is sticky — ls shows 't' in other execute bit
+# Example: /tmp is sticky (ls shows 't' in other execute bit)
 
 # Check special bits
 ls -la /usr/bin/passwd    # -rwsr-xr-x (SUID)
@@ -92,7 +92,7 @@ readlink -f linkname                # resolve symlink chain
 
 ```bash
 lsattr file             # list extended attributes
-chattr +i file          # immutable — cannot be modified or deleted
+chattr +i file          # immutable: cannot be modified or deleted
 chattr -i file          # remove immutable flag
 chattr +a file          # append-only
 ```

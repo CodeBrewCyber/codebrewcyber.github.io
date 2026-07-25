@@ -14,7 +14,7 @@ curl https://example.com                    # GET
 curl -o output.html https://example.com     # save response to file
 curl -O https://example.com/file.zip        # save with remote filename
 curl -I https://example.com                 # HEAD request (headers only)
-curl -v https://example.com                 # verbose — show request + response headers
+curl -v https://example.com                 # verbose: show request + response headers
 curl -s https://example.com                 # silent (no progress)
 curl -L https://example.com                 # follow redirects
 curl -L --max-redirs 5 https://example.com  # follow up to 5 redirects

@@ -9,7 +9,7 @@ categories = ["platforms"]
 
 ## Overview
 
-VulnHub hosts hundreds of community-created vulnerable virtual machines available for free download. Unlike browser-based platforms, VulnHub is designed for local lab use — you import the VM into VirtualBox or VMware and attack it on your own network. This makes it ideal for practitioners who want to build and run their own home lab without subscription costs.
+VulnHub hosts hundreds of community-created vulnerable virtual machines available for free download. Unlike browser-based platforms, VulnHub is designed for local lab use. You import the VM into VirtualBox or VMware and attack it on your own network. This makes it ideal for practitioners who want to build and run their own home lab without subscription costs.
 
 ## Details
 

@@ -9,7 +9,7 @@ categories = ["platforms"]
 
 ## Overview
 
-Blue Team Labs Online (BTLO) is a dedicated defensive security platform covering the skills most relevant to SOC analysts and incident responders — log analysis, malware triage, PCAP investigation, threat hunting, and SIEM usage. It's an important counterbalance to the red-team-heavy landscape of practice platforms and directly aligns with real-world analyst workflows.
+Blue Team Labs Online (BTLO) is a dedicated defensive security platform covering the skills most relevant to SOC analysts and incident responders: log analysis, malware triage, PCAP investigation, threat hunting, and SIEM usage. It's an important counterbalance to the red-team-heavy landscape of practice platforms and directly aligns with real-world analyst workflows.
 
 ## Details
 

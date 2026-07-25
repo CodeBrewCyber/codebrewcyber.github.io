@@ -9,7 +9,7 @@ categories = ["platforms"]
 
 ## Overview
 
-PortSwigger Web Security Academy is widely considered the definitive free resource for web application security. Built by the team behind Burp Suite, it covers every major vulnerability class — SQL injection, XSS, SSRF, XXE, deserialization, OAuth flaws, and more — with clear explanations followed by interactive labs you exploit directly in the browser. Essential for anyone pursuing web pentesting or a bug bounty program.
+PortSwigger Web Security Academy is widely considered the definitive free resource for web application security. Built by the team behind Burp Suite, it covers every major vulnerability class (SQL injection, XSS, SSRF, XXE, deserialization, OAuth flaws, and more) with clear explanations followed by interactive labs you exploit directly in the browser. Essential for anyone pursuing web pentesting or a bug bounty program.
 
 ## Details
 

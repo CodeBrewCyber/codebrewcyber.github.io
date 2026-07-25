@@ -9,7 +9,7 @@ categories = ["platforms"]
 
 ## Overview
 
-picoCTF is a free Capture the Flag platform developed by Carnegie Mellon University's CyberSecurity Lab. It's designed to be welcoming for absolute beginners — high school students through early college — but the challenge library scales up enough to keep intermediate players engaged. The picoGym provides year-round access to past competition problems, making it a reliable first stop before tackling harder platforms.
+picoCTF is a free Capture the Flag platform developed by Carnegie Mellon University's CyberSecurity Lab. It's designed to be welcoming for absolute beginners (high school students through early college), but the challenge library scales up enough to keep intermediate players engaged. The picoGym provides year-round access to past competition problems, making it a reliable first stop before tackling harder platforms.
 
 ## Details
 

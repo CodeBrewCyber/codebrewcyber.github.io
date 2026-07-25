@@ -1,4 +1,4 @@
-# Homepage section showcase grid — order here is display order
+# Homepage section showcase grid: order here is display order
 - title: Cheatsheets
   path: /cheatsheets
   icon: file-lines
@@ -7,7 +7,7 @@
 - title: Cloud
   path: /cloud
   icon: cloud
-  desc: Hands-on cloud security labs, certification prep, and architecture notes — methodology included.
+  desc: Hands-on cloud security labs, certification prep, and architecture notes, methodology included.
 
 - title: Learning
   path: /learning

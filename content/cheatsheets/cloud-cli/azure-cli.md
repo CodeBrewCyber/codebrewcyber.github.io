@@ -2,7 +2,7 @@
 title = "Azure CLI"
 date = 2026-07-21T00:00:00-04:00
 draft = false
-description = "Azure CLI (az) reference for authentication, subscriptions, Entra ID enumeration, RBAC, virtual machines, storage, networking, and Key Vault — useful for cloud operations and security assessments."
+description = "Azure CLI (az) reference for authentication, subscriptions, Entra ID enumeration, RBAC, virtual machines, storage, networking, and Key Vault, useful for cloud operations and security assessments."
 tags = ["cloud", "azure", "azure-cli", "entra-id", "security"]
 categories = ["cheatsheets"]
 +++
@@ -72,7 +72,7 @@ az ad app show --id <appId>
 az ad sp list --all --output table
 az ad sp show --id <appId>
 
-# Credentials on an app (client secrets / certs — audit for stale creds)
+# Credentials on an app (client secrets / certs; audit for stale creds)
 az ad app credential list --id <appId>
 
 # Who are the privileged directory roles?
@@ -80,7 +80,7 @@ az rest --method GET \
   --url "https://graph.microsoft.com/v1.0/directoryRoles"
 ```
 
-## RBAC — Role Assignments
+## RBAC: Role Assignments
 
 ```bash
 # What can this identity do, and where?
@@ -118,7 +118,7 @@ az vm start   --resource-group my-rg --name my-vm
 az vm stop    --resource-group my-rg --name my-vm
 az vm deallocate --resource-group my-rg --name my-vm   # stop billing for compute
 
-# Run a command inside a VM (no SSH needed — logged in Activity Log)
+# Run a command inside a VM (no SSH needed; logged in Activity Log)
 az vm run-command invoke -g my-rg -n my-vm \
   --command-id RunShellScript --scripts "whoami && hostname"
 ```
@@ -129,11 +129,11 @@ az vm run-command invoke -g my-rg -n my-vm \
 az storage account list --output table
 az storage account show --name mystorage --resource-group my-rg
 
-# Security posture — public access & TLS
+# Security posture: public access & TLS
 az storage account show --name mystorage \
   --query "{Public:allowBlobPublicAccess, HTTPSOnly:enableHttpsTrafficOnly, TLS:minimumTlsVersion}"
 
-# Account keys (sensitive — treat like passwords)
+# Account keys (sensitive; treat like passwords)
 az storage account keys list --account-name mystorage --resource-group my-rg
 
 # Containers & blobs (auth with a key or --auth-mode login)
@@ -176,7 +176,7 @@ az keyvault show --name my-vault
 az keyvault show --name my-vault \
   --query "{RBAC:properties.enableRbacAuthorization, Network:properties.networkAcls.defaultAction}"
 
-# Secrets (names only — values require explicit read)
+# Secrets (names only; values require explicit read)
 az keyvault secret list --vault-name my-vault --output table
 az keyvault secret show --vault-name my-vault --name db-password --query value -o tsv
 

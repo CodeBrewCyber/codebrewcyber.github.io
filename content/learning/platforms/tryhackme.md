@@ -9,7 +9,7 @@ categories = ["platforms"]
 
 ## Overview
 
-TryHackMe is one of the most beginner-friendly entry points into practical cybersecurity. It offers structured learning paths (pre-security, SOC analyst, Jr. Penetration Tester, etc.) broken into bite-sized rooms that run entirely in the browser — no local VM setup required. The gamified progression and large community make it easy to stay motivated.
+TryHackMe is one of the most beginner-friendly entry points into practical cybersecurity. It offers structured learning paths (pre-security, SOC analyst, Jr. Penetration Tester, etc.) broken into bite-sized rooms that run entirely in the browser, with no local VM setup required. The gamified progression and large community make it easy to stay motivated.
 
 ## Details
 

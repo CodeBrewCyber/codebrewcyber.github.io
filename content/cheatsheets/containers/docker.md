@@ -103,7 +103,7 @@ docker network disconnect mynet <container>
 # Run on specific network
 docker run --network mynet myapp
 
-# Isolated — no external network access
+# Isolated: no external network access
 docker run --network none myapp
 ```
 

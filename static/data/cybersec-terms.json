@@ -2,37 +2,37 @@
   {
     "term": "OSINT",
     "type": "Acronym",
-    "definition": "Open Source Intelligence — the practice of collecting and analyzing publicly available information to produce actionable intelligence.",
+    "definition": "Open Source Intelligence: the practice of collecting and analyzing publicly available information to produce actionable intelligence.",
     "example": "Maltego and Shodan are popular OSINT tools used during the reconnaissance phase of a pentest."
   },
   {
     "term": "CVE",
     "type": "Acronym",
-    "definition": "Common Vulnerabilities and Exposures — a standardized identifier for publicly disclosed cybersecurity vulnerabilities, maintained by MITRE.",
+    "definition": "Common Vulnerabilities and Exposures: a standardized identifier for publicly disclosed cybersecurity vulnerabilities, maintained by MITRE.",
     "example": "CVE-2021-44228 is the identifier for Log4Shell, a critical RCE vulnerability in Apache Log4j."
   },
   {
     "term": "CVSS",
     "type": "Acronym",
-    "definition": "Common Vulnerability Scoring System — a framework for rating the severity of security vulnerabilities on a scale of 0.0 to 10.0.",
+    "definition": "Common Vulnerability Scoring System: a framework for rating the severity of security vulnerabilities on a scale of 0.0 to 10.0.",
     "example": "A CVSS score of 9.8 (Critical) typically indicates a remotely exploitable vulnerability requiring no authentication."
   },
   {
     "term": "SIEM",
     "type": "Acronym",
-    "definition": "Security Information and Event Management — a system that aggregates, correlates, and analyzes log data from across an organization to detect threats in real time.",
+    "definition": "Security Information and Event Management: a system that aggregates, correlates, and analyzes log data from across an organization to detect threats in real time.",
     "example": "Splunk and Microsoft Sentinel are widely deployed SIEMs used by SOC analysts to hunt for anomalies."
   },
   {
     "term": "EDR",
     "type": "Acronym",
-    "definition": "Endpoint Detection and Response — a security solution that continuously monitors endpoints for suspicious activity and provides tools to investigate and respond to threats.",
+    "definition": "Endpoint Detection and Response: a security solution that continuously monitors endpoints for suspicious activity and provides tools to investigate and respond to threats.",
     "example": "CrowdStrike Falcon is an EDR platform capable of detecting fileless malware through behavioral analysis."
   },
   {
     "term": "SOC",
     "type": "Acronym",
-    "definition": "Security Operations Center — a team of security professionals who monitor, detect, analyze, and respond to cybersecurity incidents around the clock.",
+    "definition": "Security Operations Center: a team of security professionals who monitor, detect, analyze, and respond to cybersecurity incidents around the clock.",
     "example": "A Tier 1 SOC analyst triages alerts from the SIEM before escalating confirmed incidents to Tier 2."
   },
   {
@@ -44,19 +44,19 @@
   {
     "term": "Privilege Escalation",
     "type": "Concept",
-    "definition": "The act of exploiting a vulnerability or misconfiguration to gain higher access rights than originally granted — either vertically (user → admin) or horizontally (user A → user B).",
+    "definition": "The act of exploiting a vulnerability or misconfiguration to gain higher access rights than originally granted, either vertically (user → admin) or horizontally (user A → user B).",
     "example": "A SUID misconfiguration on /usr/bin/find can allow a low-privileged user to escalate to root on Linux."
   },
   {
     "term": "Zero-Day",
     "type": "Concept",
-    "definition": "A vulnerability that is unknown to the software vendor or has no available patch — attackers can exploit it before defenders have any means to remediate.",
+    "definition": "A vulnerability that is unknown to the software vendor or has no available patch. Attackers can exploit it before defenders have any means to remediate.",
     "example": "Nation-state actors frequently stockpile zero-days for use against high-value targets where detection risk is acceptable."
   },
   {
     "term": "Nmap",
     "type": "Tool",
-    "definition": "Network Mapper — an open-source tool for network discovery and security auditing that identifies live hosts, open ports, running services, and OS fingerprints.",
+    "definition": "Network Mapper: an open-source tool for network discovery and security auditing that identifies live hosts, open ports, running services, and OS fingerprints.",
     "example": "nmap -sV -sC -p- 10.10.10.1 performs a full port scan with service version detection and default scripts."
   },
   {
@@ -86,20 +86,20 @@
   {
     "term": "IOC",
     "type": "Acronym",
-    "definition": "Indicator of Compromise — artifacts observed on a network or endpoint that, with high confidence, indicate a security incident has occurred or is in progress.",
+    "definition": "Indicator of Compromise: artifacts observed on a network or endpoint that, with high confidence, indicate a security incident has occurred or is in progress.",
     "example": "A known malware C2 domain appearing in DNS logs is a classic IOC that triggers immediate investigation."
   },
   {
     "term": "TTPs",
     "type": "Acronym",
-    "definition": "Tactics, Techniques, and Procedures — the behavior patterns and methods used by threat actors, as catalogued by frameworks like MITRE ATT&CK.",
+    "definition": "Tactics, Techniques, and Procedures: the behavior patterns and methods used by threat actors, as catalogued by frameworks like MITRE ATT&CK.",
     "example": "Understanding a threat actor's TTPs helps defenders build detections that survive tool changes between campaigns."
   },
   {
     "term": "MITRE ATT&CK",
     "type": "Framework",
     "definition": "A globally accessible knowledge base of adversary tactics and techniques based on real-world observations, used for threat modeling and detection engineering.",
-    "example": "Mapping detections to ATT&CK technique IDs (e.g., T1059 — Command and Scripting Interpreter) helps measure SOC coverage."
+    "example": "Mapping detections to ATT&CK technique IDs (e.g., T1059: Command and Scripting Interpreter) helps measure SOC coverage."
   },
   {
     "term": "SQL Injection",
@@ -110,13 +110,13 @@
   {
     "term": "XSS",
     "type": "Vulnerability",
-    "definition": "Cross-Site Scripting — an attack where malicious scripts are injected into trusted web pages, executing in victims' browsers to steal cookies or perform actions on their behalf.",
+    "definition": "Cross-Site Scripting: an attack where malicious scripts are injected into trusted web pages, executing in victims' browsers to steal cookies or perform actions on their behalf.",
     "example": "A stored XSS payload in a comment field can hijack every admin session that views the affected page."
   },
   {
     "term": "SSRF",
     "type": "Vulnerability",
-    "definition": "Server-Side Request Forgery — an attack that tricks a server into making requests to unintended internal or external resources, potentially exposing cloud metadata or internal services.",
+    "definition": "Server-Side Request Forgery: an attack that tricks a server into making requests to unintended internal or external resources, potentially exposing cloud metadata or internal services.",
     "example": "Fetching http://169.254.169.254/latest/meta-data/ via an SSRF vulnerability can expose AWS IAM credentials."
   },
   {
@@ -128,7 +128,7 @@
   {
     "term": "C2",
     "type": "Concept",
-    "definition": "Command and Control — the infrastructure (servers, channels) used by an attacker to communicate with and issue commands to compromised systems (implants/beacons).",
+    "definition": "Command and Control: the infrastructure (servers, channels) used by an attacker to communicate with and issue commands to compromised systems (implants/beacons).",
     "example": "Cobalt Strike and Havoc are popular C2 frameworks used by both red teams and real-world threat actors."
   },
   {
@@ -146,13 +146,13 @@
   {
     "term": "RCE",
     "type": "Acronym",
-    "definition": "Remote Code Execution — a class of vulnerability that allows an attacker to execute arbitrary code on a target system over a network without physical access.",
+    "definition": "Remote Code Execution: a class of vulnerability that allows an attacker to execute arbitrary code on a target system over a network without physical access.",
     "example": "The Log4Shell RCE vulnerability (CVE-2021-44228) allowed unauthenticated code execution simply by logging a crafted string."
   },
   {
     "term": "LFI",
     "type": "Acronym",
-    "definition": "Local File Inclusion — a web vulnerability where user-supplied input is used to include files already present on the server, potentially exposing sensitive content or enabling RCE via log poisoning.",
+    "definition": "Local File Inclusion: a web vulnerability where user-supplied input is used to include files already present on the server, potentially exposing sensitive content or enabling RCE via log poisoning.",
     "example": "Appending ?page=../../../../etc/passwd to a PHP include parameter is a textbook LFI test case."
   },
   {
@@ -182,7 +182,7 @@
   {
     "term": "OPSEC",
     "type": "Concept",
-    "definition": "Operations Security — in offensive security, the practice of minimizing your digital footprint to avoid detection during a red team engagement or real-world operation.",
+    "definition": "Operations Security: in offensive security, the practice of minimizing your digital footprint to avoid detection during a red team engagement or real-world operation.",
     "example": "Using living-off-the-land binaries (LOLBins) instead of custom tools is an OPSEC-conscious tradecraft decision."
   },
   {
@@ -194,7 +194,7 @@
   {
     "term": "LOLBAS",
     "type": "Acronym",
-    "definition": "Living Off the Land Binaries and Scripts — legitimate Windows binaries that can be abused by attackers to execute malicious actions while blending in with normal system activity.",
+    "definition": "Living Off the Land Binaries and Scripts: legitimate Windows binaries that can be abused by attackers to execute malicious actions while blending in with normal system activity.",
     "example": "certutil.exe can be abused to download remote payloads, making it a commonly flagged LOLBAS during incident response."
   },
   {
@@ -218,7 +218,7 @@
   {
     "term": "WAF",
     "type": "Acronym",
-    "definition": "Web Application Firewall — a security appliance or service that filters and monitors HTTP traffic to and from a web application, blocking common attacks like SQLi and XSS.",
+    "definition": "Web Application Firewall: a security appliance or service that filters and monitors HTTP traffic to and from a web application, blocking common attacks like SQLi and XSS.",
     "example": "Bypassing a WAF often involves encoding payloads (e.g., URL encoding or Unicode normalization) to evade signature-based rules."
   },
   {

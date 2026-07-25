@@ -132,7 +132,7 @@ gcloud iam service-accounts list
 # Describe
 gcloud iam service-accounts describe sa-name@project.iam.gserviceaccount.com
 
-# Keys (external key files — security risk)
+# Keys (external key files, security risk)
 gcloud iam service-accounts keys list \
   --iam-account=sa-name@project.iam.gserviceaccount.com
 

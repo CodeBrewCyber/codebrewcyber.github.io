@@ -10,10 +10,10 @@ categories = ["cheatsheets"]
 ## Host Discovery
 
 ```bash
-nmap -sn 192.168.1.0/24         # ping sweep — no port scan
+nmap -sn 192.168.1.0/24         # ping sweep: no port scan
 nmap -sn -PS22,80,443 <range>   # TCP SYN ping to specific ports
 nmap -sn -PA80 <range>          # TCP ACK ping (bypass some firewalls)
-nmap -sL <range>                # list targets — no scanning
+nmap -sL <range>                # list targets: no scanning
 ```
 
 ## Port Scanning
@@ -23,7 +23,7 @@ nmap <target>                   # default: top 1000 TCP ports (SYN scan as root)
 nmap -p 22,80,443 <target>      # specific ports
 nmap -p 1-65535 <target>        # full port range
 nmap -p- <target>               # shorthand for all 65535 ports
-nmap -F <target>                # fast — top 100 ports
+nmap -F <target>                # fast: top 100 ports
 nmap -sU -p 53,161 <target>     # UDP scan (slower, requires root)
 
 # Scan types
@@ -85,12 +85,12 @@ grep "22/open" output.gnmap
 ## Timing & Performance
 
 ```bash
-nmap -T0 <target>   # paranoid — very slow, IDS evasion
+nmap -T0 <target>   # paranoid: very slow, IDS evasion
 nmap -T1 <target>   # sneaky
 nmap -T2 <target>   # polite
 nmap -T3 <target>   # normal (default)
-nmap -T4 <target>   # aggressive — faster, more noise
-nmap -T5 <target>   # insane — fastest, may miss results
+nmap -T4 <target>   # aggressive: faster, more noise
+nmap -T5 <target>   # insane: fastest, may miss results
 
 nmap --min-rate 1000 <target>   # send at least 1000 packets/sec
 nmap --max-retries 1 <target>   # reduce retries for speed

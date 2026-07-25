@@ -2,7 +2,7 @@
 title = "Process & System Auditing"
 date = 2026-05-31T00:00:00-04:00
 draft = false
-description = "Process inspection, open files, network sockets, logs, and scheduled tasks — essential for incident response and system auditing."
+description = "Process inspection, open files, network sockets, logs, and scheduled tasks, essential for incident response and system auditing."
 tags = ["linux", "processes", "incident-response", "auditing"]
 categories = ["cheatsheets"]
 +++
@@ -39,7 +39,7 @@ lsof +D /tmp                    # who has files open in /tmp
 ss -tlnp                        # TCP listening sockets with PID
 ss -tulnp                       # TCP+UDP listening with PID
 ss -anp | grep <PID>            # all sockets for a process
-netstat -tlnp                   # classic — TCP listening with PID
+netstat -tlnp                   # classic: TCP listening with PID
 ```
 
 ## Network State

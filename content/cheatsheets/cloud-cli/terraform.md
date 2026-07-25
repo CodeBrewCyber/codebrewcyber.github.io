@@ -2,7 +2,7 @@
 title = "Terraform"
 date = 2026-06-10T00:00:00-04:00
 draft = false
-description = "Terraform quick-reference for core workflow, AWS provider setup, remote state, workspaces, import, and debugging — focused on AWS deployments."
+description = "Terraform quick-reference for core workflow, AWS provider setup, remote state, workspaces, import, and debugging, focused on AWS deployments."
 tags = ["terraform", "iac", "aws", "cloud", "infrastructure"]
 categories = ["cheatsheets"]
 +++

@@ -2,7 +2,7 @@
 title = "AWS CLI"
 date = 2026-05-31T00:00:00-04:00
 draft = false
-description = "AWS CLI reference for identity verification, IAM enumeration, S3, EC2, Lambda, CloudTrail, and STS role assumption — useful for cloud operations and security assessments."
+description = "AWS CLI reference for identity verification, IAM enumeration, S3, EC2, Lambda, CloudTrail, and STS role assumption, useful for cloud operations and security assessments."
 tags = ["cloud", "aws", "aws-cli", "iam", "security"]
 categories = ["cheatsheets"]
 +++
@@ -20,7 +20,7 @@ aws --profile prod s3 ls
 export AWS_PROFILE=prod
 ```
 
-## STS — Assume Role
+## STS: Assume Role
 
 ```bash
 # Assume a role
@@ -91,7 +91,7 @@ aws s3 rb s3://empty-bucket
 aws s3 rm s3://my-bucket/file.txt
 aws s3 rm s3://my-bucket/ --recursive           # delete all objects
 
-# Security — check public access block
+# Security: check public access block
 aws s3api get-public-access-block --bucket my-bucket
 
 # Check bucket ACL
